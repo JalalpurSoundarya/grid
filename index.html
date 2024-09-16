@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(6, 6, 62);
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:6px;
+        }
+        .grid{
+            height: 30vh;
+            width: 32vw;
+            background-color: rgb(1, 15, 16);
+            display: grid;
+            grid-template-columns:auto auto auto;
+           
+            gap:5px;
+        }
+        .grid1{
+            height: 30vh;
+            width: 32vw;
+            background-color: rgb(1, 15, 16);
+            display: grid;
+            grid-template-columns:auto auto auto auto;
+           
+            gap:5px; 
+        }
+        .grid11{
+            height: 30vh;
+            width: 32vw;
+            background-color: rgb(1, 15, 16);
+            display: grid;
+            grid-template-columns:auto auto auto auto auto auto;
+           
+            gap:5px; 
+        }
+
+        .grid111{
+            height: 30vh;
+            width: 32vw;
+            background-color: rgb(1, 15, 16);
+            display: grid;
+            grid-template-columns:auto auto auto auto ;
+           grid-template-rows: auto auto auto auto auto;
+            gap:5px; 
+        }
+         .grid1111{
+            display: grid;
+            height: 30vh;
+            width: 32vw;
+            background-color: rgb(1, 15, 16);
+          grid-template-columns:auto auto auto auto auto;
+          grid-template-rows: auto auto auto; 
+          gap:5px;
+         }  
+      .g1{
+            background-color: #e96219;
+            
+        }
+        .g2{
+            background-color: #ffa500;
+        }
+        .g3{
+            background-color: rgb(242, 189, 90);
+        }
+        .g4{
+            background-color: hsl(156, 82%, 31%);
+        }
+        .g5{
+            background-color: hsl(130, 67%, 38%);
+        }
+        .g6{
+            background-color: #00ffd9;
+        }
+        .g11{
+            background-color: #e96219;
+            grid-column: 1/3;
+            
+        }
+         .g22{
+            background-color: #ffa500;
+            
+        }  
+         .g33{
+            background-color: rgb(242, 189, 90);
+            grid-row:1/3;
+            grid-column: 3/4;
+        } 
+        .g44{
+            background-color: hsl(156, 82%, 31%);
+        }
+        .g55{
+            background-color: hsl(130, 67%, 38%);
+        }
+         /* .g66{
+            background-color: #00ffd9;
+        }  */
+        .g111{
+            background-color: #e96219;
+            grid-column: 1/4;
+            
+        }
+         .g222{
+            background-color: #ffa500;
+        } 
+        .g333{
+            background-color: rgb(242, 189, 90);
+            
+        }
+        .g444{
+            background-color: hsl(156, 82%, 31%);
+            
+            
+        }
+        .g555{
+            background-color: hsl(130, 67%, 38%);
+            grid-row: 2/2;
+            grid-column: 2/4;
+            
+        }
+        .g666{
+            background-color: #00ffd9;
+            grid-column: 1/4;
+        }
+        .g1111{
+            background-color: #e96219;
+            grid-column: 1/3;
+            
+        }
+         .g2222{
+            background-color: #ffa500;
+            grid-row: 1/2;
+            grid-column: 3/5;
+        } 
+         /* .g3333{
+            background-color: rgb(242, 189, 90);  
+            
+        }*/
+        .g4444{
+            background-color: hsl(156, 82%, 31%);
+            
+            
+        }
+        .g5555{
+            background-color: hsl(130, 67%, 38%);
+            grid-column: 2/5;
+            
+        }
+        .g6666{
+            background-color: hwb(33 4% 4%);
+            grid-column: 1/5;
+        }
+        .r1{
+            background-color: hsl(156, 82%, 31%);
+        } 
+        .r2{
+            background-color: #e96219;
+        }
+        .r3{
+            background-color: hsl(130, 67%, 38%);
+        }
+        .r4{
+            background-color:  rgb(242, 189, 90);
+        }
+        .r5{
+            background-color: #00ffd9;  
+        }
+        .r6{
+            background-color: #ffa500;
+        }
+        .r7{
+            background-color: #ffa500;
+        }
+        .r8{
+            background-color: hsl(156, 82%, 31%);
+        } 
+        .r9{
+            background-color: #e96219;
+        }
+        .r10{
+            background-color: hsl(130, 67%, 38%);
+        }
+        .r11{
+            background-color:  rgb(242, 189, 90);
+        }
+        .r12{
+            background-color: #e96219;
+        }
+        .r13{
+            background-color: hsl(156, 82%, 31%);
+        }
+        .r14{
+            background-color: #e96219;
+        
+        }
+        .r15{
+            background-color: hsl(130, 67%, 38%);
+        }
+        .r16{
+            background-color: #ffa500;
+        }
+        .r17{
+            background-color: hsl(130, 67%, 38%);
+        }
+        .r18{
+            background-color: #00ffd9; 
+        }
+        .s1{
+            background-color: #e96219;
+            grid-column: 1/3;
+        }
+        .s2{
+             background-color:hsl(150, 67%, 38%) ;
+        }
+        .s3{
+             background-color: rgb(242, 189, 90) ;
+        }
+        .s4{
+           background-color: #ffa500;
+        }
+        .s5{
+            background-color:  hsl(156, 82%, 31%);
+        }
+        .s6{
+           background-color: hsl(130, 67%, 38%) ;
+        }
+         /* .s7{
+             background-color: #e96219;
+           }  */
+          .s8{
+             background-color: #ffa500;
+             grid-column: 1/3;
+             grid-row: 3/5;
+            
+        }
+       /* .s9{
+
+          background-color: #00ffd9;
+      } */
+     .s10{
+         background-color: #00ffd9 ;
+     } 
+      .s11{
+         background-color: #e96219;
+       }
+        .s12{
+          background-color: hsl(130, 67%, 38%);
+         }
+         /* .s13{
+         background-color: #e96219;
+       } */
+        .s14{
+          background-color: hsl(156, 82%, 31%);
+          grid-column: 1/4;
+         }
+         .s15{
+            background-color: #f37531;
+         }
+         .t1{
+            background-color: hsl(21, 97%, 58%);
+            grid-column: 1/3;
+            
+            
+         }
+         .t2{
+            background-color: hsl(130, 67%, 38%);
+            grid-column:3/5;
+            
+            
+         }
+         .t3{
+            background-color: rgb(242, 189, 90) ;
+            grid-column: 1/3;
+           grid-row: 2/5;
+            
+         }
+         .t4{
+            display: grid;
+           gap: 8px;
+            background-color:hsl(156, 82%, 31%) ;
+            grid-column: 3/5;
+            grid-row: 2/5;
+            
+         }
+         /* .t5{
+            background-color: hsl(150, 67%, 38%);
+         }
+         .t6{
+            background-color: hsl(21, 97%, 58%);
+         } */
+          .tt1{
+            background-color: #00ffd9;
+            
+        
+          }
+          .tt2{
+            background-color: hsl(150, 67%, 38%);
+            
+        
+          }
+          .tt3{
+             background-color:#e96219 ;
+          }
+          .u1{
+              background-color: #e96219 ;
+          }
+          .u2{
+            background-color: #ffa500;
+        }
+        .u3{
+           background-color: hsl(130, 67%, 38%); 
+        }
+        .u4{
+           background-color: hsl(150, 67%, 38%); 
+        }
+        .u5{
+           background-color: #00ffd9; 
+        }
+        .u6{
+            background-color: #ffa500;
+        }
+        .u7{
+           background-color: hsl(130, 67%, 38%); 
+        }
+        .u8{
+           background-color: hsl(150, 67%, 38%); 
+           grid-column: 3/6;
+        }
+        .u9{
+           background-color: #00ffd9; 
+           grid-column: 1/6;
+        }
+       .v1{
+        background-color: #f37531;
+        grid-column: 1/5;
+       }
+       .v2{
+        background-color:hsl(150, 67%, 38%);
+       grid-row: 2/4;
+        grid-column: 1/3;
+       }
+       .v3{
+        background-color:hsl(130, 67%, 38%);
+        grid-column: 3/5;
+       }
+       .v4{
+        background-color: orange;
+       }
+       .v5{
+        background-color: #f37531;
+       }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="grid">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div  class=" g3"></div>
+            <div  class="g4"></div>
+            <div  class=" g5"></div>
+            <div  class=" g6"></div>
+       </div>
+       
+        <div class="grid">
+            <div class=" g11"></div>
+            <!-- <div class=" g22"></div> -->
+            <div class="g33"></div>
+            <div class=" g44"></div>
+            <div class="g55"></div>
+             <!-- <div class="g66"></div>  -->
+        </div>
+
+        <div class="grid">
+            <div class="g111"></div>
+            <!-- <div class="g222"></div> -->
+            <!-- <div class="g333"></div> -->
+            <div class="g444"></div>
+            <div class="g555"></div>
+            <div class="g666"></div>
+        </div>
+
+        <div class="grid1">
+            <div class="g1111"></div>
+            <div class="g2222"></div>
+            <!-- <div class="g3333"></div> -->
+            <div class="g4444"></div>
+            <div class="g5555"></div>
+            <div class="g6666"></div>
+            
+        </div>
+
+        <div class="grid11">
+            <div class="r1"></div>
+            <div class="r2"></div>
+            <div class="r3"></div>
+            <div class="r4"></div>
+            <div class="r5"></div>
+            <div class="r6"></div>
+            <div class="r7"></div>
+            <div class="r8"></div>
+            <div class="r9"></div>
+            <div class="r10"></div>
+            <div class="r11"></div>
+            <div class="r12"></div>
+            <div class="r13"></div>
+            <div class="r14"></div>
+            <div class="r15"></div>
+            <div class="r16"></div>
+            <div class="r17"></div>
+            <div class="r18"></div>
+        </div>
+
+        <div class="grid111">
+            <div class="s1"></div>
+            <div  class="s2"></div>
+            <div  class="s3"></div>
+            <div  class="s4"></div>
+            <div  class="s5"></div>
+            <div  class="s6"></div>
+            <div class="s7"></div>
+            <div class="s8"></div>
+            <!-- <div class="s9"></div> -->
+            <div class="s10"></div>
+            <div class="s11"></div>
+            <div class="s12"></div>
+            <!-- <div  class="s13"></div> -->
+            <div class="s14"></div>
+            <div class="s15"></div>
+        </div>
+
+          <div class="grid1">
+            <div class="t1"></div>
+            <div class="t2"></div>
+            <div class="t3"></div>
+            <div class="t4">
+                <div class="tt1"> </div>
+                <div class="tt2"></div>
+                <div class="tt3"></div>
+            </div> 
+            <!-- <div class="t5"></div>
+            <div class="t6"></div> -->
+        </div>
+            
+        <div class="grid1111">
+            <div class="u1"></div>
+            <div class="u2"></div>
+            <div class="u3"></div>
+            <div class="u4"></div>
+            <div class="u5"></div>
+            <div class="u6"></div>
+            <div class="u7"></div>
+            <div class="u8"></div>
+            <div class="u9"></div>
+            
+        </div>
+
+           <div class="grid1">
+            <div class="v1"></div>
+            <div  class="v2"></div>
+            <div  class="v3"></div>
+            <div  class="v4"></div>
+            <div  class="v5"></div>
+            
+        </div>
+      </div>
+    </div>
+</body>
+</html>
